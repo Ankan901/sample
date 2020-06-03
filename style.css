@@ -1,0 +1,272 @@
+    @import url('https://fonts.googleapis.com/css2?family=Montaga&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+    .body {
+     font-family: 'Chelsea Market', cursive;
+     color: #2D3E50;
+     margin: auto;
+    }
+    .landing {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background-color: rgba(0, 0, 0,.6);
+        min-height: 100vh;
+    }
+    .landing::before {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-image: url(121.jpg);
+        background-size: cover;
+        content: "";
+        z-index: -1;
+    }
+    .landing-text {
+        text-align: center;
+        z-index: 2;
+        margin: auto auto ;
+        font-family: 'Chelsea Market', cursive;
+        color: whitesmoke;
+    }
+    .Highlight {
+        font-family: sans-serif;
+        color: rgb(6, 176, 255);
+    }
+    .random {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Chelsea Market', cursive;
+    }
+    .random a  {
+        position: relative;
+        display: inline-block ;
+        padding: 15px 30px;
+        color: #2196f3;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        text-decoration: none;
+        font-size: 20px;
+        overflow: hidden;
+        transition: 0.2s;
+
+    }
+    .random a:hover {
+        color: #255784;
+        background: #2196f3;
+        box-shadow: 0 0 10px  #2193f3 0 0, 40px  #2193f3, 0 0 80px  #2193f3;
+        transition-delay: 1s;
+    }
+    .random a span {
+        position: absolute;
+        display: block;
+    }
+    .random a span :nth-child(1) {
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg,transparent,#2196f3);
+    }
+    .random a:hover span:nth-child(1)
+    {
+        left: 100%;
+        transition: 1s;
+    }
+    .random a span:nth-child(3) {
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg,transparent,#2196f3);
+    }
+    .random a:hover span:nth-child(3)
+    {
+        right: 100%;
+        transition: 1s;
+        transition-delay: 0.5s;
+    }
+    .random a span:nth-child(2) {
+        top: -100%;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg,transparent,#2196f3);
+    }
+    .random a:hover span:nth-child(2)
+    {
+        top: 100%;
+        transition: 1s;
+        transition-delay: 0.25s;
+    }
+    .random a span:nth-child(4) {
+        bottom: -100%;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(360deg,transparent,#2196f3);
+    }
+    .random a:hover span:nth-child(4)
+    {
+        bottom: 100%;
+        transition: 1s;
+        transition-delay: 0.75s;
+    }
+    .navbar {
+        background: rgba(0,0,0,0.6);
+    }
+    .text {
+        font-family: 'Chelsea Market', cursive;
+    }
+    .nav-link   {
+        font-family: 'Chelsea Market', cursive;
+    }
+    .one {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        background: #fff;
+
+    }
+    .two    {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        background: #000;
+    }
+    .two:before {
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 150px;
+        background: #000;
+        top: -60px;
+        left: 0;
+        transform: skewY(8deg);
+    }
+    .two:after {
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 150px;
+        background: #000;
+        top: -60px;
+        right: 0;
+        transform: skewY(-8deg);
+    }
+
+    /* Form and social media section  */
+    .body .middle {
+        padding: 0;
+        margin: 0;
+    }
+    .middle {
+        position: absolute;
+        transform: translateY(-50%);
+        width: 100%;
+        text-align: center;
+    }
+    .middle .btn {
+        display: inline-block;
+        width: 90px;
+        height: 90px;
+        background: #f1f1f1;
+        margin: 10px;
+        border-radius: 30%;
+        box-shadow: 0 5px 15px -5px #00000070;
+        color: #3498bd;
+        overflow: hidden;
+        position: relative;
+    }
+    .middle .btn i {
+        line-height: 90px;
+        font-size: 26px;
+        transition: 0.2s linear;
+    }
+    .middle .btn:hover i{
+        transform: scale(1.3);
+        color: #f1f1f1;
+    }
+    .middle .btn::before {
+        content: "" ;
+        position: absolute;
+        width: 120%;
+        height: 120%;
+        background: #3498bd ;
+        transform: rotate(45deg);
+        left: 110%;
+        top: 90%;
+    }
+    .middle .btn:hover::before {
+        animation: aaa 0.7s 1;
+        top: -10%;
+        left: -10%;
+    }
+    @keyframes aaa {
+        0% {
+            left: -110%;
+            top: 90%;
+        }50% {
+            left: 10%;
+            top: -30%;
+        }100%{
+            top: -10%;
+            left: -10%;
+        }
+    }
+    .gotopbtn {
+        position: sticky;
+        width: 50px;
+        height: 50px;
+        background: #27ae60;
+        bottom: 60px;
+        right: 50px;
+        text-decoration: none;
+        text-align: center;
+        line-height: 50px;
+        color: white;
+        font-size: 40px;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+#mail {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,50,0.5),rgba(0,0,50,0.5)),url(msg.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    /* max-width: 700px;
+    margin: auto; */
+
+}
+/* #contact h2 {
+    font-size: 32px;
+    line-height: 10px;
+      */
+/* }
+#mail .form {
+    margin-top: 50px;
+    transition: all 4s ease-in-out;
+    align-items: center;
+} */
+#mail .form-control {
+    width: 600px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+#mail  .input {
+    height: 45px;
+}
+.contact-form {
+    align-items: center;
+}
